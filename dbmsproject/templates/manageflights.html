@@ -1,0 +1,107 @@
+{% load static %}
+<!doctype html>
+<html>
+
+	<head>
+		<title>Manage Flights</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Poppins">
+
+        <link rel="stylesheet" href="{% static '/css/mycss.css' %}">
+        <script type="text/javascript" src="/static/js/myjs.js"></script>
+    </head>
+
+	<style type="text/css">
+		.affix{
+			top:5rem;
+		}		
+		body{
+position: relative;
+		};
+		
+	</style>
+	<body style="background-color:azure;" data-spy="scroll" data-target="#myscroll">
+				<nav class="navbar navbar-inverse" data-spy="affix"  style="border-radius:0px !important; margin:0;border: 0 ; width: 100%;top:0;z-index: 9999 !important">
+					<div class="navbar-header">
+						  <a class="navbar-brand" href="/AirlineX">Airline-X</a>
+						</div>
+						
+					</div>
+				</nav>
+<!--container strat-->
+
+		<div class="container" data-spy="affix" style="margin: 0;bottom: 0;float: left;top:5rem;width: 0%;height:100%; background-color: ">
+
+		  <ul class="nav nav-pills nav-stacked" style="border-radius: 0">
+		    
+	
+		  </ul>
+		</div>
+
+
+<!--scrooll container start-->
+
+			<div id="#myscroll" class="container" style="margin-left: 0;margin-top: 5rem; float: right; width:100%; padding: 0 10rem 0 5rem">
+			<h2>Schedule Flights</h2>
+			 <hr>
+				
+				<br>
+
+				
+					    	
+					    
+								
+								
+								
+								
+						
+			</div>
+
+				<ul>
+				{% for flight in flights %}
+			  	
+					    	
+				<mark>{{flight.Msg}}</mark>	
+				<li><h4> Flight_no: </h4>{{flight.flight_no}} </li>            
+				<li><h4>Origin:     </h4>   {{flight.origin}} </li>
+				<li><h4>Destination: </h4>     {{flight.destination}}</li>
+				<li><h4>Departure_date: </h4>   {{flight.departure_date}} </li>    
+				<li><h4>Departure_time:  </h4>   {{flight.departure_time}}  </li>
+				<li><h4>Price:  	  </h4>     {{flight.price}}</li>
+
+				<h1>-----------------------------------------------</h1>	     
+				
+					    					
+						
+			</div>
+						
+					</div>
+				</div>
+				{% endfor %}
+			</ul>
+
+	  
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+			$("#m1").click({param1:"#sub1",param2:"#sub2",param3:"#sub3",param4:"#sub4"},navbar_movment);
+	$("#m2").click({param1:"#sub2",param2:"#sub1",param3:"#sub3",param4:"#sub4"},navbar_movment);
+	$("#m3").click({param1:"#sub3",param2:"#sub1",param3:"#sub2",param4:"#sub4"},navbar_movment);
+	$("#m4").click({param1:"#sub4",param2:"#sub1",param3:"#sub2",param4:"#sub3"},navbar_movment);
+
+		</script>

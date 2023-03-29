@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Booking</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="{% static '/js/myjs.js' %}"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+				<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Poppins">
+
+		<link rel="stylesheet" href="{% static '/css/mycss.css' %}">
+	</head>
+	<style type="text/css">
+        label{
+        color: white;
+
+
+    }
+    #footer {
+		position:absolute;
+		padding: 20px;
+		margin: 0;
+		background: #020202;
+		text-align: center;
+		width: 100% !important;
+		height:100px;
+		bottom: 0;
+
+	}
+	ul.icons li {
+				display: inline-block;
+				padding: 0 2rem 0 0;
+				font-size: 36px;
+			}	
+</style>
+	<body  style="background-image: url(/static/img/pay.jpg); height: 730px">
+		
+				
+				
+
+				
+				
+				<!--header-->
+
+				<div class="container-fluid">
+					<header>
+						<h3> Book Your Flight </h3>
+						
+					</header>
+
+
+					<!--panel-->
+					<div class="col-sm-8 col-sm-offset-2">
+						<div class="panel-group">
+						  	<div class="panel panel-default panel-transparent">
+						    	<div class="panel-heading">
+						    		<legend style="text-align: center; color:azure">Payment information</legend>
+						    	</div>
+						    	<div class="panel-body">
+						    		<div class="input-group">
+										<a href="#"></a>
+									</div>
+									<form action="" method="post">
+										{% csrf_token %}
+									   <br>
+										<h2 class="h3 mb-3 font-weight-normal">Payment</h2>
+										<br>
+										
+									 
+										{{form.as_p}}
+										
+										
+									
+									  
+										<button class="btn btn-lg btn-primary btn-block" type="submit" style="width: 20%">Continue</button>
+										</div>
+									</form>
+                                    <div>
+                                        {% for message in messages %}
+                                        <h4><mark>{{message}}</mark></h4>
+                                        {% endfor %}
+                                                </div>
+							
+        
+
+    </body>
+</html>
+
+
+
+
+            

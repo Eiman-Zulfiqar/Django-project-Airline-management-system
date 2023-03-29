@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://127.0.0.1:8000/booking -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Booking</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./Booking_files/bootstrap.min.css">
+		<script src="./Booking_files/jquery.min.js.download"></script>
+		<script src="./Booking_files/bootstrap.min.js.download"></script>
+		<script src="./Booking_files/myjs.js.download"></script>
+		<link rel="stylesheet" href="./Booking_files/font-awesome.min.css">
+				<link rel="stylesheet" type="text/css" href="./Booking_files/css">
+
+		<link rel="stylesheet" href="./Booking_files/mycss.css">
+	<style type="text/css">
+        label{
+        color: white;
+
+
+    }
+    #footer {
+		position:absolute;
+		padding: 20px;
+		margin: 0;
+		background: #020202;
+		text-align: center;
+		width: 100% !important;
+		height:100px;
+		bottom: 0;
+
+	}
+	ul.icons li {
+				display: inline-block;
+				padding: 0 2rem 0 0;
+				font-size: 36px;
+			}	
+</style></head>
+	
+	<body style="background-color:white;&gt;
+		
+				
+				
+
+				&lt;div class=" background-wrapper"="">
+				
+				<!--header-->
+
+				<div class="container-fluid">
+					<header>
+						<h3> Book Your Flight </h3>
+						
+					</header>
+
+
+					<!--panel-->
+					<div class="col-sm-8 col-sm-offset-2">
+						<div class="panel-group">
+						  	<div class="panel panel-default panel-transparent">
+						    	<div class="panel-heading">
+						    		<legend style="text-align: center; color:azure">Flight Information</legend>
+						    	</div>
+						    	<div class="panel-body">
+						    		<div class="input-group">
+										<a href="http://127.0.0.1:8000/booking#"></a>
+									</div>
+									<form action="http://127.0.0.1:8000/booking" method="post">
+										<input type="hidden" name="csrfmiddlewaretoken" value="fMOmB1l4N2zWzYMGctP5L4KQFpNtc1YU9EAKogZb7E7mXJYOmQ8znkPn3qbGyrgz">
+									   <br>
+										<h2 class="h3 mb-3 font-weight-normal">Start your booking</h2>
+										<br>
+										
+									 
+										<p>
+    <label for="id_classtype">Classtype:</label>
+    <input type="text" name="classtype" class="form-control" maxlength="10" id="id_classtype" required="">
+    
+    
+  </p>
+
+  
+  <p>
+    <label for="id_origin">Origin:</label>
+    <input type="text" name="origin" class="form-control" maxlength="10" id="id_origin">
+    
+    
+  </p>
+
+  
+  <p>
+    <label for="id_destination">Destination:</label>
+    <input type="text" name="destination" class="form-control" maxlength="10" id="id_destination">
+    
+    
+  </p>
+
+  
+  <p>
+    <label for="id_departure_date">Departure date:</label>
+    <input type="text" name="departure_date" class="form-control" id="id_departure_date">
+    
+    
+  </p>
+
+  
+  <p>
+    <label for="id_return_date">Return date:</label>
+    <input type="text" name="return_date" class="form-control" id="id_return_date">
+    
+    
+      
+    
+  </p>
+										
+										<div>
+											<br>  
+									  
+										<button class="btn btn-lg btn-primary btn-block" type="submit" style="width: 20%">Continue</button>
+										</div>
+									</form>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+		
+	
+
+
+		
+
+
+	
+<div style="display: none" class="ubey-RecordingScreen-count-down ubey-RecordingScreen-count-down-container">
+    <style>
+        .ubey-RecordingScreen-count-down-container {
+            position: fixed;
+            height: 100vh;
+            width: 100vw;
+            top: 0;
+            left: 0;
+            z-index: 9999999999999;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .ubey-RecordingScreen-count-down-content {
+            position: absolute;
+            display: flex;
+            top: 50%;
+            left: 50%;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            height: 15em;
+            width: 15em;
+            transform: translate(-50%, -100%);
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+        }
+
+        #ubey-RecordingScreen-count-count {
+            font-size: 14em;
+            transform: translateY(-2%);
+        }
+    </style>
+    <div class="ubey-RecordingScreen-count-down-content">
+        <span id="ubey-RecordingScreen-count-count"></span>
+    </div>
+</div></body></html>

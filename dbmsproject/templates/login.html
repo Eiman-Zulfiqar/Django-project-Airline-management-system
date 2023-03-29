@@ -1,0 +1,128 @@
+{% load static %}
+<!doctype html>
+<html>
+
+	<head>
+		<title>Registration  form</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Poppins">
+
+        <link rel="stylesheet" href="{% static '/css/mycss.css' %}">
+        <script type="text/javascript" src="/static/js/myjs.js"></script>
+    </head>
+
+    <style type="text/css">
+        label{
+        color: white;
+
+
+    }
+    #footer {
+		position:absolute;
+		padding: 20px;
+		margin: 0;
+		background: #020202;
+		text-align: center;
+		width: 100% !important;
+		height:100px;
+		bottom: 0;
+
+	}
+	ul.icons li {
+				display: inline-block;
+				padding: 0 2rem 0 0;
+				font-size: 36px;
+			}	
+</style>
+   
+
+<div class="background-wrapper" style="background-image: url(/static/img/clouds.jpg); height: 720px">
+        <div class="container-fluid" style="height:10px">
+            <header>
+                <h3>Login here</h3>
+                
+            </header>
+       
+        <div class="col-sm-6 col-sm-offset-3">
+            <div class="panel-group panel-transparent">
+                <div class="panel panel-default panel-transparent">
+                    <div class="panel-heading">
+                        <legend style="text-align: center;">Login form</legend>
+                    </div>
+                    <div class="panel-body" style="">
+
+                        <form class="form-signin" method="post" action="/login">
+                            {% csrf_token %}
+                           
+                            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+
+                            <label for="inputEmail" class="sr-only">Username</label>
+                            <input type="text" id="inputEmail" name="username" class="form-control" placeholder="Username" required
+                                autofocus>
+                      <br>
+                    
+                            <label for="inputPassword" class="sr-only">Password</label>
+                            <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+                        
+                            <div class="checkbox mb-3">
+                                <label>
+                                    <input type="checkbox" value="remember-me"> Remember me
+                                </label>
+                            </div>
+                            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                            <p class="mt-5 mb-3 text-muted">&copy; 2023-2030</p>
+                        </form>
+
+                        
+
+                        <div>
+                            {% for message in messages %}
+                            <h4><mark>{{message}}</mark></h4>
+                            {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        
+                        <!-- Footer -->
+<footer id="footer">
+    <div class="wrapper">
+        <ul class="icons">
+            <li><a href="#" class="fa fa-twitter" style="color: rgb(255, 253, 253)"></a></li>
+            <li><a href="#" class="fa fa-facebook" style="color: rgb(255, 255, 255)"></a></li>
+            <li><a href="#" class="fa fa-instagram" style="color: rgb(255, 255, 255)"></a></li>
+            <li><a href="#" class="fa fa-envelope" style="color: rgb(255, 255, 255)"></a></li>
+        </ul>
+    </div>
+    <div class="copyright"; style = " color: white">
+        &copy; Airline-X. All rights reserved.
+    </div>
+</footer>
+
+                    </body>
+
+                    </html>
+
+
+
+
+
+
+
+
+
+
+
+                   

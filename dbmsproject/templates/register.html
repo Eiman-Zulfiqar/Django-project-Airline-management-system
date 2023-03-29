@@ -1,0 +1,106 @@
+{% load static %}
+<!doctype html>
+<html>
+
+	<head>
+		<title>Registration  form</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href=" https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Poppins">
+
+        <link rel="stylesheet" href="{% static '/css/mycss.css' %}">
+        <script type="text/javascript" src="/static/js/myjs.js"></script>
+    </head>
+
+    <style type="text/css">
+        label{
+        color: black;
+    }
+
+    #footer {
+		position:absolute;
+		padding: 20px;
+		margin: 0;
+		background: #020202;
+		text-align: center;
+		width: 100% !important;
+		height:100px;
+		bottom: 0;
+
+	}
+	ul.icons li {
+				display: inline-block;
+				padding: 0 2rem 0 0;
+				font-size: 36px;
+			}	
+
+
+</style>
+   
+
+<div class="background-wrapper" style="background-image: url(/static/img/clouds.jpg); height: 730px">
+       
+    <div class="container-fluid" style="height:10px">
+            <header>
+                <h3>Register here</h3>
+                
+            </header>
+       
+        <div class="col-sm-6 col-sm-offset-3">
+            <div class="panel-group panel-transparent">
+                <div class="panel panel-default panel-transparent">
+                    <div class="panel-heading">
+                        <legend style="text-align: center;">Registration form</legend>
+                    </div>
+                    <div class="panel-body" style="">
+        <form action="register" method="post" margin: 10px>
+            {% csrf_token %}
+            
+            <div class="form-group" style="color:black">
+            <input type"text" name="first_name" placeholder="First Name"><br>
+            </div>
+            <div class="form-group" style="color:black" >
+            <input type"text" name="last_name" placeholder="Last name"><br>
+            </div>
+            <div class="form-group"   style="color:black">
+            <input type"text" name="username" placeholder="Username"><br>
+            </div>
+            <div class="form-group"   style="color:black">
+            <input type"email" name="email" placeholder="email"><br>
+            </div>
+            <div class="form-group"   style="color:black">
+            <input type"password" name="password1" placeholder="new password"><br>
+            </div>
+            <div class="form-group"    style="color:black">
+
+            <input type"password" name="password2" placeholder="confirm password"><br>
+            </div>
+            <div class="form-group" style="color:black"> 
+            <input type="submit" value="Submit">
+            </div>
+        </div>
+        <br>
+
+
+
+        </form>
+
+
+        <div>
+{% for message in messages %}
+<h4><mark>{{message}}</mark></h4>
+{% endfor %}
+        </div>
+
+    </div>
+
+
+  
+      </div>
+    </body>
+    </html>    
+
